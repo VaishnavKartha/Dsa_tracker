@@ -1,5 +1,6 @@
 import React from 'react'
-import {Dot} from 'lucide-react'
+import {Dot, ExternalLink} from 'lucide-react'
+import {Link} from 'react-router-dom'
 
 const Questioncard = ({qno,question,markasDone}) => {
 
@@ -12,8 +13,17 @@ const Questioncard = ({qno,question,markasDone}) => {
         </span>
 
         <div>
-            <div>
+            <div className='flex items-center gap-2'>
+                
                 {question.question_name}
+
+                <a href = {question.leetcode_link} 
+                target='_blank' 
+                rel="noopener noreferrer" 
+                onClick={(e)=>e.stopPropagation()}
+                className='text-blue-500 hover:text-blue-300'>
+                    <ExternalLink size={"16px"} />
+                </a>
             </div>
 
             <div className='text-[12px] bg-border w-fit px-2 py-0.5 rounded-lg'>

@@ -4,7 +4,8 @@ const QuestionSchema = mongoose.Schema({
     question_name : {type:String,required:true},
     difficulty : {type:String,enum:["Easy","Medium","Hard"],required:true},
     topic:{type:String, required:true},
-    isDone:{type:Boolean,default:false,required:true}
+    isDone:{type:Boolean,default:false,required:true},
+    leetcode_link:{type:String,required:true}
 },{timestamps:true})
 
 const questionModel = mongoose.model("Questions",QuestionSchema)

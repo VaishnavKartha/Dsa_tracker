@@ -186,9 +186,6 @@ function App() {
       </div>
 
 
-
-
-
       <div className="h-screen overflow-scroll no-scrollbar">
 
         { displayQuestions.length > 0 &&  displayQuestions?.map((question,i)=>{
